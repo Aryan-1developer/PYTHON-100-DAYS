@@ -19,4 +19,4 @@ for _ in range(60):
 
 
 s = Screen()
-s.turtle.exitonclick()
+s.exitonclick()
