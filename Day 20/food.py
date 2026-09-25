@@ -1,20 +1,18 @@
-from turtle import Screen, Turtle
+from turtle import  Turtle
 import random
 
 class Food(Turtle):
     def __init__(self):
-        position = (random.randint(-300, 300), random.randint(-300, 300))
         super().__init__(visible=False)
         self.shape("circle")
-        self.color("red")
+        self.color("Blue")
         self.shapesize(stretch_len=0.5, stretch_wid=0.5)
         self.penup()
         self.speed("fastest")
-        self.goto(position)
+        self.refresh()
         self.showturtle()
 
-is_food = True
-while is_food:
-    raj = Food()
-s = Screen()
-s.exitonclick()
+    def refresh(self):
+        position = (random.randint(-280, 280), random.randint(-280, 280))
+        self.goto(position)
+
